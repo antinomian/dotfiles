@@ -1,0 +1,9 @@
+alias screen="screen -e ^Zz"
+alias dev="ssh tom.dev.digg.internal"
+alias a=alias
+a h=history
+a pipe="ssh -i /home/vagrant/.ssh/socialcode_id_rsa -L 8005:localhost:8005 -L 8306:message-catalyst-staging-db.socialcodedev.com:3306 tom@catalyst-core-alpha.socialcodedev.com -L 9306:message-catalyst-alpha-db.socialcodedev.com:3306"
+a graphite='ssh -i ~/.ssh/socialcode_id_rsa tom@graphite.socialcodedev.com -L 2000:graphite.socialcodedev.com:80'
+export TMPDIR=/tmp
+a fe1="ssh ec2-23-22-203-107.compute-1.amazonaws.com"
+a fe2="ssh ec2-50-17-50-16.compute-1.amazonaws.com"
