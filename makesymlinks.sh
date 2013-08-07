@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="screenrc emacs emacs.d ipython aliases"    # list of files/folders to symlink in homedir
+files="screenrc emacs emacs.d ipython bash_aliases"    # list of files/folders to symlink in homedir
 
 ##########
 
