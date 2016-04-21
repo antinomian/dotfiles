@@ -181,3 +181,20 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;; START inserted by setup-dev.sh
+(setq-default indent-tabs-mode nil)
+(setq-default c-basic-offset 4)
+(setq-default show-trailing-whitespace t)
+;; END inserted by setup-dev.sh
+
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
+
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(setq exec-path (append exec-path '("/usr/local/bin")))
