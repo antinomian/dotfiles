@@ -1,4 +1,14 @@
 (require 'org-install)
+
+
+(require 'python)
+
+(defun my-shell-mode-hook ()
+  (add-hook 'comint-output-filter-functions 'python-pdbtrack-comint-output-filter-function t))
+
+(add-hook 'shell-mode-hook 'my-shell-mode-hook)
+
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
